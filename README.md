@@ -1,5 +1,12 @@
 # votacao
 
+### Arquitetura 
+
+- A arquitetura escolhida nesse desafio foi a Hexagonal
+
+![Captura de Tela 2024-06-27 às 11 15 20](https://github.com/brunocassio/votacao/assets/6243187/b936c346-8ccb-4a33-b1f7-b38da35e6844)
+
+
 ### Como executar a aplicação?
 
 - A aplicação é Spring Boot standalone, ou seja, após baixar o codigo, rodar a Main classe DesafioVotacaoApplication.java
@@ -22,3 +29,10 @@
     - usuario: admin@localhost.com
     - senha: admin
     - Ao clicar em Servers ele pedirá a senha do banco que é: password (todos esses dados estão no compose.yaml)
+
+### Observações Finais
+
+- Devido ao curto tempo, não foi possível criar algumas tarefas bonus e nem cobrir completamente a aplicação com testes.
+- Eu decidi utilizar a biblioteca Mapstruct para conversão dos dto's/entidades e com isso gerou um problema de recursividade no endpoint de contabilizar os votos.
+- Esse problema da recursividade existe uma solução utlizando CycleAvoidingMappingContext, mas precisava de mais tempo para soluciona-lo.
+- Também gostaria de ter trabalhado um pouco mais na melhoria da Documentação da api.
